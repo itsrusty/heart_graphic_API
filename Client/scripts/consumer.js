@@ -1,0 +1,5 @@
+const getDataAPI = () => {
+
+}
+
+getDataAPI()
