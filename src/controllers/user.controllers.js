@@ -31,7 +31,7 @@ export const createUser = async (req, res) => {
     if (savedDataUser) {
       res.status(200).json({ message });
     } else {
-      res.status(500).json({ message: "Failed to save data user." });
+      res.status(204).json({ message: "Failed to save data user." });
     }
   } catch (error) {
     throw new Error(error);

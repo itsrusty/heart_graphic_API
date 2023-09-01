@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="../pages/assets/styles/app.css" />
     <title>App Heart</title>
   </head>
   <body>
     <div class="overlay">
       <!-- LOGN IN FORM by Omar Dsoky -->
-      <form action="">
+      <form class="form">
         <!--   con = Container  for items in the form-->
         <div class="con">
           <!--     Start  header Content  -->
@@ -27,62 +28,67 @@
             </span>
             <!--   user name Input-->
             <input
-              class="form-input"
+              class="username"
               id="txt-input"
               type="text"
-              placeholder="@UserName"
+              placeholder="Nombre"
               required
             />
 
             <br />
 
-            <!--   Password -->
-
-            <span class="input-item">
-              <i class="fa fa-key"></i>
-            </span>
-            <!--   Password Input-->
             <input
-              class="form-input"
-              type="password"
-              placeholder="Password"
+              class="years"
+              type="text"
+              placeholder="Años"
               id="pwd"
-              name="password"
+              class="years"
               required
             />
-
-            <!--      Show/hide password  -->
-            <span>
-              <i
-                class="fa fa-eye"
-                aria-hidden="true"
-                type="button"
-                id="eye"
-              ></i>
-            </span>
-
             <br />
-            <!--        buttons -->
-            <!--      button LogIn -->
-            <button class="log-in">Log In</button>
+            <input
+            class="altura"
+            type="text"
+            placeholder="Altura"
+            id="pwd"
+            required
+          />
+          <br />
+          <input
+          class="problemas"
+          type="text"
+          placeholder="Problemas de corazón"
+          id="pwd"
+          required
+        />
+        <br />
+        <input
+        class="actividades"
+        type="text"
+        placeholder="Actividades físicas"
+        id="pwd"
+        required
+      />
+      <br />
+            <button class="log-in saveDataButton" type="input">Guardar datos</button>
           </div>
 
           <!--   other buttons -->
           <div class="other">
             <!--      Forgot Password button-->
-            <button class="btn submits frgt-pass">Forgot Password</button>
+            <button class="btn submits frgt-pass" style="color: white; background: transparent; visibility: hidden;" >____-_---</button>
             <!--     Sign Up button -->
-            <button class="btn submits sign-up">
-              Sign Up
+            <button class="btn submits sign-up showMoreData">
+              Ver todos los datos
               <!--         Sign Up font icon -->
               <i class="fa fa-user-plus" aria-hidden="true"></i>
             </button>
             <!--      End Other the Division -->
           </div>
-
           <!--   End Conrainer  -->
         </div>
         <!-- End Form -->
       </form>
+      <script src="../scripts/consumer.js"></script>
   </body>
 </html>
