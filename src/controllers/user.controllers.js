@@ -48,5 +48,7 @@ export const showUsers = async (req, res) => {
   try {
     const data = await userModel.find();
     res.json({ message: data });
-  } catch (error) {}
+  } catch (error) {
+    throw new Error(error);
+  }
 };

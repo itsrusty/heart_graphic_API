@@ -64,7 +64,7 @@ form.addEventListener("submit", async (e) => {
 
 showMoreData.addEventListener("click", async () => {
   console.log("llamando...");
-
+  window.location.href = "./users.data.html";
   try {
     const response = await fetch(
       "https://heart-graphic-microservice.onrender.com/auth/api/users"
