@@ -12,11 +12,11 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   // Obtener datos del usuario del formulario
-  const username = document.querySelector(".username").value;
-  const years = document.querySelector(".years").value;
-  const altura = document.querySelector(".altura").value;
-  const problemas = document.querySelector(".problemas").value;
-  const actividades = document.querySelector(".actividades").value;
+  const username = document.querySelector("#username").value;
+  const years = document.querySelector("#years").value;
+  const altura = document.querySelector("#altura").value;
+  const problemas = document.querySelector("#problemas").value;
+  const actividades = document.querySelector("#actividades").value;
 
   const id = generateID();
 
@@ -49,6 +49,11 @@ form.addEventListener("submit", async (e) => {
     if (response.ok) {
       console.log("todo bien");
       console.log(responseData);
+      username.value = "";
+      years.value = "";
+      altura.value = "";
+      actividades.value = "";
+      problemas.value = "";
     } else {
       console.log("error en la súbida de datos!", responseData.error);
     }
@@ -59,7 +64,7 @@ form.addEventListener("submit", async (e) => {
 
 showMoreData.addEventListener("click", async () => {
   console.log("llamando...");
-  
+
   try {
     const response = await fetch(
       "https://heart-graphic-microservice.onrender.com/auth/api/users"
