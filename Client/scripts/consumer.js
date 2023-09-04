@@ -1,4 +1,5 @@
 const showMoreData = document.querySelector(".showMoreData");
+const show = document.querySelector(".show")
 
 const generateID = () => {
   const timestamp = Date.now().toString(36);
@@ -45,7 +46,6 @@ form.addEventListener("submit", async (e) => {
 
     // render
     const responseData = await response.json();
-
     if (response.ok) {
       console.log("todo bien");
       console.log(responseData);
@@ -62,17 +62,11 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
-showMoreData.addEventListener("click", async () => {
+showMoreData.addEventListener("click", () => {
   console.log("llamando...");
   window.location.href = "./users.data.html";
-  try {
-    const response = await fetch(
-      "https://heart-graphic-microservice.onrender.com/auth/api/users"
-    );
-
-    const dataUsers = await response.json();
-    console.log(dataUsers);
-  } catch (error) {
-    throw new Error(error);
-  }
 });
+
+// show.addEventListener("click", async ()=> {
+
+// })
